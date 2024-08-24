@@ -1,26 +1,21 @@
 package com.nikhil.blogapp.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "users")
+@Table(name = "categories")
 @NoArgsConstructor
 @Getter
 @Setter
-public class User {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer categoryId;
 
-    private String name;
+    private String categoryTitle;
 
-    private String email;
-
-    private String password;
-
-    private String about;
+    private String categoryDescription;
 }
